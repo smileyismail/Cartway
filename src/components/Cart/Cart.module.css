@@ -12,6 +12,11 @@
   font-weight: bolder;
 }
 
+.cart h2:last-of-type {
+  text-align: end;
+  margin-right: 3rem;
+}
+
 .cart ul {
   max-height: 60vh;
   overflow-y: scroll;

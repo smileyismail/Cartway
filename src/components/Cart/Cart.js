@@ -10,6 +10,7 @@ const Cart = (props) => {
   const dispatch = useDispatch();
   const items = useSelector((state) => state.cart.items);
   const cartQuantity = useSelector((state) => state.cart.totalQuantity);
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
 
   function closeCartHandler() {
     dispatch(operationsSliceActions.toggleShowCart());
@@ -35,6 +36,7 @@ const Cart = (props) => {
           ))}
         </ul>
         {cartQuantity === 0 && <h3>Your Cart is empty</h3>}
+        <h2>Total : ₹{totalAmount.toFixed(2)}</h2>
         <div className={classes.btns}>
           <button onClick={closeCartHandler}>Order</button>
           <button onClick={closeCartHandler}>Close</button>
