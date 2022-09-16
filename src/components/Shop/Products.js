@@ -40,15 +40,9 @@ const Products = (props) => {
       {!isLoading && (
         <ul>
           {productsData
-            .filter((product) => {
-              if (searchTerm === "") {
-                return product;
-              } else if (
-                product.title.toLowerCase().includes(searchTerm.toLowerCase())
-              ) {
-                return product;
-              }
-            })
+            .filter((product) =>
+              product.title.toLowerCase().includes(searchTerm.toLowerCase())
+            )
             .map((product) => (
               <ProductItem
                 key={product.id}
