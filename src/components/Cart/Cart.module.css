@@ -1,0 +1,42 @@
+.cart {
+  background-color: var(--white);
+  color: var(--dark-blue);
+  margin: 1rem 0;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.cart h2 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  font-weight: bolder;
+}
+
+.cart ul {
+  max-height: 60vh;
+  overflow-y: scroll;
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+}
+
+.cart h3 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.btns button {
+  float: right;
+  margin: 1rem 0.3rem;
+}
+
+.btns button:first-of-type {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border-color: var(--blue);
+}
+
+.btns button:first-of-type:hover {
+  background-color: var(--blue);
+}

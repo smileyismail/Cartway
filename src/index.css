@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+:root {
+  --white: #f9f7f7;
+  --light-blue: #e1e4eb;
+  --blue: #3f72af;
+  --dark-blue: #112d4e;
+}
+
+body {
+  background-color: var(--white);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  background-color: transparent;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+button:hover,
+button:active {
+  background-color: var(--blue);
+  border-color: var(--dark-blue);
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 0.51rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--light-blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-blue);
+  border-radius: 4px;
+}
