@@ -1,11 +1,10 @@
 
-# Mini Games Studio
+# E-Commerse Store
 
-A web application where you can play bunch of free retro games and freshen up your memories.
+This is an E-Commerce Store where Products are listed and can be filtered by category and search.
 ## Live Preview
 
-https://smiley-mini-games-studio.netlify.app/
-
+https://smiley-e-store.netlify.app/
 ## Authors
 
 - [@smiley](https://github.com/smileyismail)
