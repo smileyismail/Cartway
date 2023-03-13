@@ -1,12 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import Modal from "../UI/Modal";
-import classes from "./Cart.module.css";
 import CartItem from "./CartItem";
 
 import { operationsSliceActions } from "../../Store/operationsSlice";
 
-const Cart = (props) => {
+const Cart = () => {
   const dispatch = useDispatch();
   const items = useSelector((state) => state.cart.items);
   const cartQuantity = useSelector((state) => state.cart.totalQuantity);
@@ -18,9 +17,9 @@ const Cart = (props) => {
 
   return (
     <Modal>
-      <div className={classes.cart}>
-        <h2>Your Shopping Cart</h2>
-        <ul>
+      <div className="p-3 bg-primary max-h-[60vh]">
+        <h2 className="text-xl font-semibold my-3"> Your Shopping Cart</h2>
+        <ul className={`flex flex-col justify-center gap-3 overflow-scroll`}>
           {items.map((item) => (
             <CartItem
               key={item.id}
@@ -35,11 +34,28 @@ const Cart = (props) => {
             />
           ))}
         </ul>
-        {cartQuantity === 0 && <h3>Your Cart is empty</h3>}
-        <h2>Total : ₹{totalAmount.toFixed(2)}</h2>
-        <div className={classes.btns}>
-          <button onClick={closeCartHandler}>Order</button>
-          <button onClick={closeCartHandler}>Close</button>
+
+        {cartQuantity === 0 && (
+          <h3 className="text-center m-6 mt-10">Your Cart is empty</h3>
+        )}
+
+        <h2 className="text-end m-4 font-semibold">
+          Total : ₹{totalAmount.toFixed(2)}
+        </h2>
+
+        <div className="flex flex-row-reverse gap-2">
+          <button
+            className="border-action bg-action border-[1px] px-4 py-2 rounded-md font-semibold flex justify-center items-center hover:bg-action hover:text-textBlackDark duration-200 active:scale-105"
+            onClick={closeCartHandler}
+          >
+            Order
+          </button>
+          <button
+            className="border-action border-[1px] px-4 py-2 rounded-md font-semibold flex justify-center items-center hover:bg-action hover:text-textBlackDark duration-200 active:scale-105"
+            onClick={closeCartHandler}
+          >
+            Close
+          </button>
         </div>
       </div>
     </Modal>

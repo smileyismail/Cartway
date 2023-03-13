@@ -1,6 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
 import ProductItem from "./ProductItem";
-import classes from "./Products.module.css";
 
 const Products = (props) => {
   const [products, setProducts] = useState([]);
@@ -43,15 +42,17 @@ const Products = (props) => {
   });
 
   return (
-    <section className={classes.products}>
-      <h2>Buy your favorite products</h2>
-      <div className={classes.inputs}>
-        <div className={classes.sort}>
+    <>
+      <h2 className="m-8">Buy your favorite products</h2>
+
+      <div className="flex justify-evenly items-center py-4 border-b-[1px] mb-4 border-action">
+        <div>
           <label htmlFor="category">Select Category: </label>
           <select
             id="category"
             value={category}
             onChange={selectCategoryHandler}
+            className="p-2 rounded-md border-[1px] border-action"
           >
             <option value="all">All</option>
             <option value="men's clothing">Men's clothing</option>
@@ -71,11 +72,12 @@ const Products = (props) => {
               setSearchTerm(e.target.value);
               setCategory("all");
             }}
+            className="p-2 rounded-md border-[1px] border-action"
           />
         </div>
       </div>
       {!isLoading && (
-        <ul>
+        <ul className="flex flex-wrap justify-center item gap-4">
           {sortedProducts
             .filter((product) =>
               product.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -94,7 +96,7 @@ const Products = (props) => {
         </ul>
       )}
       {isLoading && <h1>Loading...</h1>}
-    </section>
+    </>
   );
 };
 
