@@ -7,6 +7,7 @@ import { cartSliceActions } from "../../Store/cartSlice";
 const CartItem = (props) => {
   const dispatch = useDispatch();
   const { title, quantity, total, price, id, image } = props.item;
+  console.log(total);
 
   function incrementItemHandler() {
     dispatch(
