@@ -4,7 +4,7 @@ This is an E-Commerce Store with cart option and it can also be filtered by cate
 
 ## Demo
 
-https://cartway.netlify.app/
+<a href="https://cartway.netlify.app/" target="_blank">Click Here</a> for Live Preview
 
 ## Tech Stack
 
