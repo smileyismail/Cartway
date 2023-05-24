@@ -8,7 +8,7 @@ https://cartway.netlify.app/
 
 ## Tech Stack
 
-**Client:** React, Redux, TailwindCSS
+React, Redux, TailwindCSS
 
 ## Run Locally
 
